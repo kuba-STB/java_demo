@@ -2,29 +2,17 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        int pierwsza = 131;
-        int druga = 9;
-        int trzecia = 22;
-        int czwarta = 47;
-        int suma1 = pierwsza + druga;
-        int suma2 = trzecia + czwarta;
+        Bug bug1 = new Bug("Username is not displayed", "newmember@java.com", 4);
+
+        bug1.allDetails();
+
+        Bug bug2 = new Bug("Cannot load parameters", "user@java.com", 3);
+
+        bug2.showEmail(bug2.email);
+        bug2.showStatus();
+        String priority = bug2.getPriority();
+        System.out.println(priority);
+    }
 
 
-        if(suma1 % 2 == 0){
-            System.out.println("parzysta");
-        } else {
-            System.out.println("nieparzysta");}
-
-        if(suma2 % 2 == 0){
-            System.out.println("parzysta");
-        } else {
-            System.out.println("nieparzysta");}
-
-        if (suma1 % 2 == 0 && suma2 % 2 == 0) {
-            System.out.println("obie sumy są parzyste");
-        } else {
-            System.out.println("jedna suma jest nieparzysta");
-        }
-
-
-    }};
+}

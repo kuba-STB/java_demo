@@ -9,7 +9,7 @@ public class Bug {
         this.description = description;
         this.email = email;
         this.priority = priority;
-        this.isOpen = getStatusOpen();
+        this.isOpen = true;
     }
 
     void allDetails(){
@@ -17,9 +17,6 @@ public class Bug {
                 + " Bug status: " + isOpen);
     }
 
-    boolean getStatusOpen(){
-        return true;
-    }
 
     void showEmail(String email){
         System.out.println("Email: " + email);

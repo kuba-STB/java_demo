@@ -1,18 +1,26 @@
+import model.Bug;
+
 public class MainApp {
 
     public static void main(String[] args) {
 
-        Bug bug1 = new Bug("Username is not displayed", "newmember@java.com", 4);
+        Bug bug = new Bug("Cannot load parameters", "user@java.com", 3);
 
-        bug1.allDetails();
+        bug.setEmail("sdfgs");
+        System.out.println(bug.getEmail());
+        bug.setEmail("nowy@mail.pl");
+        System.out.println(bug.getEmail());
 
-        Bug bug2 = new Bug("Cannot load parameters", "user@java.com", 3);
+        bug.setPriority(6);
+        System.out.println(bug.getBugPriority());
+        bug.setPriority(1);
+        System.out.println(bug.getBugPriority());
 
-        bug2.showEmail(bug2.email);
-        bug2.showStatus();
-        String priority = bug2.getPriority();
-        System.out.println(priority);
+        bug.setDescription("sadf");
+        System.out.println(bug.getDescription());
+        bug.setDescription("This is a completely new description");
+        System.out.println(bug.getDescription());
     }
 
 
-}
+};
